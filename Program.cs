@@ -8,7 +8,8 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
-            Player player1 = new Player();
+            // instantiating new SmackTalkingPlayer subclass to create object that inherits attributes of the Player base class:
+            Player player1 = new SmackTalkingPlayer();
             player1.Name = "Bob";
 
             Player player2 = new Player();
@@ -32,8 +33,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            // instantiating new SmackTalkingPlayer subclass to create object that inherits attributes of the Player base class:
+            Player smackTalker = new SmackTalkingPlayer { Name = "James"};
+
+            smackTalker.Play(player3);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+                player1, player2, player3, large, smackTalker
             };
 
             PlayMany(players);
@@ -62,7 +70,7 @@ namespace ShootingDice
             {
                 Console.WriteLine("-------------------");
 
-                // Make adjacent players play noe another
+                // Make adjacent players play one another
                 Player player1 = shuffledPlayers[i];
                 Player player2 = shuffledPlayers[i + 1];
                 player1.Play(player2);
