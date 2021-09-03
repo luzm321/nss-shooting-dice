@@ -8,6 +8,20 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
+            Console.WriteLine($@"
+Let's Play a Shooting Dice Game! :D
+               (( _______
+     _______     /\O    O\
+    /O     /\   /  \      \
+   /   O  /O \ / O  \O____O\ ))
+((/_____O/    \\    /O     /     
+  \O    O\    / \  /   O  /
+   \O    O\ O/   \/_____O/
+    \O____O\/ ))          ))
+  ((
+            
+            ");
+
             // instantiating new SmackTalkingPlayer subclass to create object that inherits attributes of the Player base class:
             Player player1 = new SmackTalkingPlayer();
             player1.Name = "Bob";
@@ -49,8 +63,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            // instantiating new CreativeSmackTalkingPlayer subclass to create object that inherits attributes of the Player base class:
+            Player creativeSmackTalker = new CreativeSmackTalkingPlayer { Name = "Loki"};
+
+            creativeSmackTalker.Play(large);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalker, higherPlayer
+                player1, player2, player3, large, smackTalker, higherPlayer, creativeSmackTalker
             };
 
             PlayMany(players);
