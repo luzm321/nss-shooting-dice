@@ -24,11 +24,11 @@ Let's Play a Shooting Dice Game! :D
 
             // instantiating new SmackTalkingPlayer subclass to create object that inherits attributes of the Player base class:
             Player player1 = new SmackTalkingPlayer();
-            player1.Name = "Bob";
+            player1.Name = "Groot";
 
             // instantiating new OneHigherPlayer subclass to create object that inherits attributes of the Player base class:
             Player player2 = new OneHigherPlayer();
-            player2.Name = "Sue";
+            player2.Name = "Captain America";
 
             player2.Play(player1);
 
@@ -36,14 +36,14 @@ Let's Play a Shooting Dice Game! :D
 
             // instantiating new HumanPlayer subclass to create object that inherits attributes of the Player base class:
             Player player3 = new HumanPlayer();
-            player3.Name = "Wilma (Human Player)";
+            player3.Name = "Vision (Human Player)";
 
             player3.Play(player2);
 
             Console.WriteLine("-------------------");
 
             Player large = new LargeDicePlayer();
-            large.Name = "Bigun Rollsalot";
+            large.Name = "The Hulk";
 
             player1.Play(large);
 
@@ -71,14 +71,21 @@ Let's Play a Shooting Dice Game! :D
             Console.WriteLine("-------------------");
 
             // instantiating new SoreLoserPlayer subclass to create object that inherits attributes of the Player base class:
-            Player soreLoser = new SoreLoserPlayer { Name = "Ultron"};
+            Player soreLoser = new SoreLoserPlayer { Name = "Thanos"};
 
             soreLoser.Play(creativeSmackTalker);
 
             Console.WriteLine("-------------------");
 
+            // instantiating new UpperHalfPlayer subclass to create object that inherits attributes of the Player base class:
+            Player upperHalf = new UpperHalfPlayer { Name = "Dr. Strange"};
+
+            upperHalf.Play(soreLoser);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalker, higherPlayer, creativeSmackTalker, soreLoser
+                player1, player2, player3, large, smackTalker, higherPlayer, creativeSmackTalker, soreLoser, upperHalf
             };
 
             PlayMany(players);
