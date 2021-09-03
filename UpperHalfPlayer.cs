@@ -11,7 +11,7 @@ namespace ShootingDice
         {
             // Return a random number between 1 and DiceSize that is always in the upper half of the possible rolls:
             // Default value of DiceSize is 6, so dividing variable by 2 and passing halved result as a parameter and the initial value
-            // of DiceSize as a second parameter to the Next() method ensures the rolls will always be between 3 and 6:
+            // of DiceSize as a second parameter to the Next() method ensures the rolls will always be between 4 and 6:
             return new Random().Next((DiceSize/2), DiceSize) + 1;
         }
 

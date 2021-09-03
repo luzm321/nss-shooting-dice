@@ -84,8 +84,15 @@ Let's Play a Shooting Dice Game! :D
 
             Console.WriteLine("-------------------");
 
+            // instantiating new SoreLoserUpperHalfPlayer subclass to create object that inherits attributes of the Player base class:
+            Player upperHalfSoreLoser = new SoreLoserUpperHalfPlayer { Name = "Red Skull"};
+
+            upperHalfSoreLoser.Play(upperHalf);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalker, higherPlayer, creativeSmackTalker, soreLoser, upperHalf
+                player1, player2, player3, large, smackTalker, higherPlayer, creativeSmackTalker, soreLoser, upperHalf, upperHalfSoreLoser
             };
 
             PlayMany(players);
