@@ -10,7 +10,7 @@ namespace ShootingDice
         public override int Roll()
         {
             // Prompt user to input a number for roll:
-            Console.Write($"{Name}, says please enter a number for a roll!");
+            Console.Write($"{Name}, says please enter a number for a roll between 1 and {DiceSize}!");
             Console.WriteLine();
             Console.Write("User Number: ");
             int userInput = int.Parse(Console.ReadLine());

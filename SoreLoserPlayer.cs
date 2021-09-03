@@ -27,11 +27,11 @@ namespace ShootingDice
                 try
                 {
                     Console.WriteLine($"{other.Name} Wins!");
-                    Console.WriteLine($"{Name} accuses other player: {other.Name} is cheating! I want a rematch! >:(");  
+                    Console.WriteLine($"{Name} accuses other player: {other.Name} is cheating! I want a rematch or I'll snap my fingers! >:(");  
                 }
                 catch 
                 {
-                    Console.WriteLine($"{Name} accuses other player: {other.Name} is cheating! I want a rematch! >:("); 
+                    Console.WriteLine($"{Name} accuses other player: {other.Name} is cheating! I want a rematch or I'll snap my fingers! >:("); 
                 }
             }
             else
