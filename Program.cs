@@ -20,8 +20,9 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
-            Player player3 = new Player();
-            player3.Name = "Wilma";
+            // instantiating new HumanPlayer subclass to create object that inherits attributes of the Player base class:
+            Player player3 = new HumanPlayer();
+            player3.Name = "Wilma (Human Player)";
 
             player3.Play(player2);
 
